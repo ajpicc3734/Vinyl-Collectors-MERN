@@ -22,4 +22,4 @@ const recordSchema = new Schema(
 
 const Record = model("Record", recordSchema);
 
-moduel.exports = Record;
+module.exports = Record;
