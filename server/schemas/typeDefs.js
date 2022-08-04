@@ -10,6 +10,12 @@ type User {
   comments: [Comment]
 }
 
+type Record {
+  _id: ID
+  title: String
+  artist: String
+  comments: [Comment]
+}
 
 type Comment {
   _id: ID
