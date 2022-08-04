@@ -10,6 +10,7 @@ const typeDefs = gql`
     comments: [Comment]
   }
 
+
   type Comment {
     _id: ID
     commentText: String
@@ -17,9 +18,13 @@ const typeDefs = gql`
     createdAt: String
   }
 
-  type Record {
-    title: String
-  }
+type Record {
+  _id: ID
+  title: String
+  artist: String
+  comments: [Comment]
+}
+
 
   type Query {
     helloWorld: String
