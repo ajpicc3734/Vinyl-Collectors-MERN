@@ -26,6 +26,12 @@ const userSchema = new Schema(
         ref: 'Post'
       }
     ],
+    // records: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Collection'
+    //   }
+    // ],
     friends: [
       {
         type: Schema.Types.ObjectId,
