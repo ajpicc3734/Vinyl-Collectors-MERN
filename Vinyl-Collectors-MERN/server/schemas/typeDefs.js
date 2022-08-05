@@ -7,6 +7,7 @@ const typeDefs = gql`
     email: String
     friendCount: Int
     posts: [Post]
+    # records: [Collection]
     friends: [User]
   }
 
@@ -18,6 +19,13 @@ const typeDefs = gql`
     reactionCount: Int
     reactions: [Reaction]
   }
+  
+  # type Record {
+  #   _id: ID
+  #   title: String
+  #   artist: String
+  #   comments: [Comment]
+  # }
 
   type Reaction {
     _id: ID
