@@ -35,6 +35,38 @@ export const QUERY_POST = gql`
     }
   }
 `;
+//Query Record
+export const QUERY_RECORD = gql`
+  query record($id: ID!) {
+    record(_id: $id) {
+      _id
+      title
+      artist
+      comments {
+        commentText
+        _id
+        createdAt
+        username
+      }
+    }
+  }
+`;
+export const QUERY_RECORDS= gql`
+  query records($username: String) {
+    records(username: $username) {
+        _id
+        title
+        artist
+        comments {
+          commentText
+          _id
+          createdAt
+          username
+      }
+    }
+  }
+`;
+
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -53,6 +85,16 @@ export const QUERY_USER = gql`
         createdAt
         reactionCount
       }
+      records {
+        _id
+        title
+        artist
+      }
+      comments{
+        _id
+        commentText
+        createdAt
+      }
     }
   }
 `;
@@ -64,6 +106,16 @@ export const QUERY_ME = gql`
       username
       email
       friendCount
+      records {
+        _id
+        title
+        artist
+      }
+      comments{
+        _id
+        commentText
+        createdAt
+      }
       posts {
         _id
         postText
@@ -90,6 +142,7 @@ export const QUERY_ME_BASIC = gql`
       _id
       username
       email
+      records
       friendCount
       friends {
         _id
