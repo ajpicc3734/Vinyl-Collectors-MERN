@@ -23,5 +23,9 @@
   "homepage": "https://github.com/ajpicc3734/Vinyl-Collectors-MERN#readme",
   "devDependencies": {
     "concurrently": "^7.3.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1"
   }
 }
