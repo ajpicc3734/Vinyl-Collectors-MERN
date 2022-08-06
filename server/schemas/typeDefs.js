@@ -19,12 +19,20 @@ const typeDefs = gql`
     reactions: [Reaction]
   }
   
-  # type Record {
-  #   _id: ID
-  #   title: String
-  #   artist: String
-  #   comments: [Comment]
-  # }
+  type Record {
+    _id: ID
+    title: String
+    artist: String
+     comments: [Comment]
+   }
+
+   
+   type Comment {
+    _id: ID
+    commentText: String
+    createdAt: String
+    username: String
+  }
   type Reaction {
     _id: ID
     reactionBody: String
@@ -39,6 +47,7 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
+    records(username: String): [Record]
     posts(username: String): [Post]
     post(_id: ID!): Post
   }
@@ -52,3 +61,4 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+  // addRecord()

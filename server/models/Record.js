@@ -11,7 +11,11 @@ const recordSchema = new Schema(
       type: String,
       required: true,
     },
-    comments: [commentSchema],
+  username: {
+    type: String,
+    required: true
+  },
+    comments: [commentSchema]
   },
   {
     toJSON: {
