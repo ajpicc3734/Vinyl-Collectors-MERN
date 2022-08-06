@@ -1,13 +1,312 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+header {
+  width: 100%;
+  flex-direction: wrap;
+  background-color: rgba(213, 89, 17, 0.693);
+  border: 2px black solid;
+
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  padding:30px;
+}
+.hero {
+  background-image: url(/assets/images/mick-haupt-CbNBjnXXhNg-unsplash.jpg);
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  flex-direction: wrap;
+  margin-bottom: 25px;
+  background-position: center;
+}
+
+.body {
+  text-align: center;
+  font-size: px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-style: italic;
+  text-align: center;
+  font-size: 35px;
+  color:rgb(15, 16, 16);
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color:rgb(22, 37, 84);
+  padding: 30px;
+}
+
+nav {
+  background-color: rgba(213, 89, 17, 0.693);
+  padding: 10px;
+  text-align: right;
+
+
+}
+
+nav a {
+  font-size: large;
+  color: rgb(248, 188, 110);
+  font: black;
+  padding: 5px;
+}
+
+nav a:hover {
+  font-size: x-large;
+  text-decoration: underline black 3px;
+  font: black;
+}
+
+#options a {
+  color: rgb(236, 122, 66);
+  font-size: 20px;
+}
+
+#options a:hover {
+  color: rgb(15, 14, 13);
+}
+
+html {
+  background-color: rgb(249, 226, 167);
+}
+
+#login-form {
+  padding: 75px;
+ 
+}
+
+.btn{
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(236, 122, 66);
+
+}
+.link {
+  text-align: center;
+}
+
+.link a {
+  color: white;
+  text-decoration: underline white;
+  font-size: 1.56rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  background-color: rgba(213, 89, 17, 0.693);
+  width: 100%;
+  padding: 20px;
+
+}
+
+footer h2 {
+  color: black;
+  font-size: 1.5rem;
+  margin: 1px;
+  text-align: center;
+}
+
+article {
+  margin: 20px;
+  padding: 10px;
+}
+
+#upload {
+  border: black solid 2px;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+
+}
+
+.record-image {
+  display: flex;
+  width: 300px;
+  height:300px;
+  object-fit: scale-down;
+  
+}
+/* singlepage */
+#single-post{
+  text-align: center;
+}
+textarea {
+  width:50%;
+  height: 200px;
+}
+h4{
+  font-size: 25px;
+  text-align: left;
+}
+#comment-section{
+  padding:20px;
+  margin-left: auto;
+  margin-right:auto;
+  width:75%;
+}
+#comment-text{
+  font-size: 18px;
+  border: 1px black solid;
+  margin:5px;
+}
+
+#post-title{
+  padding-top: 50px;
+  font-size: 25px;
+  color: rgb(22, 37, 84);
+  text-decoration: underline;
+  font-weight: bold;
+  
+}
+/* //user page// */
+#user-id{
+  font-size: 20px;
+  font-weight: BOLD;
+  color:rgba(213, 89, 17, 0.693);
+  text-align: center;
+ text-decoration: underline;
+}
+
+#user-record {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 1;}
+
+.user-post{
+  text-align: left;
+  padding-left: 30px;
+}
+#recordlist {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 1;
+}
+.user-post{
+  border: 3px rgba(12, 12, 12, 0.769) solid;
+}
+/* posts page */
+#post {
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px black solid;
+  margin:5px;
+
+}
+.post-list{
+  border: 3px solid black;
+  padding: 20px;
+  margin-left: auto;
+  margin-right:auto;
+  width: 75%;
+  
+}
+#addNewPost{
+  text-align: center;
+  font-size: 30px;
+}
+/* record page*/
+.record-post{
+border: 5px solid rgba(12, 12, 12, 0.769);
+}
+
+#recordArtist{
+  font-size: 30px;
+  text-align: center;
+  color: rgb(22, 37, 84);
+}
+#recordTitle{
+  text-align: center;
+  font-size: 20px;
+  color:rgba(213, 89, 17, 0.693);
+}
+
+#record-message{
+  text-align: center;
+
+}
+#userEmail{
+  text-align: center;
+  color: aquamarine;
+  flex-wrap: wrap;
+}
+a {
+  color: rgb(166, 69, 69);
+}
+
+a:link {
+  color: rgb(166, 69, 69);
+}
+a:hover {
+  color: rgb(170, 76, 47);
+  font-style: italic;
+}
+/* forms */
+#login-form, #signup-form, #newPost{
+  flex-wrap: wrap;
+  text-align: center;
+}
+#signup {
+  font-size: 20px;
+  padding:50px;
+ 
+}
+
+#post-title, #post-url{
+  margin:10px;
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER*/
+
+@media screen and (max-width: 575px) {
+  h1 {
+      font-size: 2.7em;
+      text-align: center;
+  }
+
+  h2 {
+      font-size: 2em;
+      font-weight: bold;
+  }
+
+  h3 {
+      font-size: 1.75em;
+      font-weight: normal;
+      color: rgba(5, 48, 48, 0.788);
+      font-weight: bold;
+  }
+
+.hero {
+  background-image: url(../images/mick-haupt-CbNBjnXXhNg-unsplash.jpg);
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-position: center;
+}
+/* .record-image{
+
+
+} */
 }
