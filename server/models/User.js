@@ -18,12 +18,18 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      minlength: 8
+      minlength: 6
     },
     posts: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Post'
+      }
+    ],
+    records: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Record'
       }
     ],
     friends: [
