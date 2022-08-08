@@ -1,16 +1,16 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import React from "react";
+import { Navigate, useParams } from "react-router-dom";
 
-import RecordForm from '../components/RecordForm';
-import RecordList from '../components/RecordList';
-import PostForm from '../components/PostForm';
-import PostList from '../components/PostList';
-import FriendList from '../components/FriendList';
+import RecordForm from "../components/RecordForm";
+import RecordList from "../components/RecordList";
+import PostForm from "../components/PostForm";
+import PostList from "../components/PostList";
+import FriendList from "../components/FriendList";
 
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
-import { ADD_FRIEND } from '../utils/mutations';
-import Auth from '../utils/auth';
+import { useQuery, useMutation } from "@apollo/client";
+import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import { ADD_FRIEND } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 const Profile = (props) => {
   const { username: userParam } = useParams();
@@ -31,14 +31,14 @@ const Profile = (props) => {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
-    return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
-    );
-  }
+  // if (!user?.username) {
+  //   return (
+  //     <h4>
+  //       You need to be logged in to see this. Use the navigation links above to
+  //       sign up or log in!
+  //     </h4>
+  //   );
+  // }
 
   const handleClick = async () => {
     try {
@@ -54,7 +54,7 @@ const Profile = (props) => {
     <div>
       <div className="flex-row mb-3">
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing {userParam ? `${user.username}'s` : "your"} profile.
         </h2>
 
         {userParam && (
@@ -66,14 +66,11 @@ const Profile = (props) => {
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
-          <PostList
-            posts={user.posts}
-            title={`${user.username}'s posts...`}
-          />
+          <PostList posts={user.posts} title={`${user.username}'s posts...`} />
         </div>
 
         <div className="col-12 mb-3 col-lg-8">
-        <RecordList
+          <RecordList
             records={user.records}
             title={`${user.username}'s records...`}
           />
@@ -89,7 +86,6 @@ const Profile = (props) => {
       </div>
       <div className="mb-3">{!userParam && <PostForm />}</div>
       <div className="mb-3">{!userParam && <RecordForm />}</div>
-
     </div>
   );
 };

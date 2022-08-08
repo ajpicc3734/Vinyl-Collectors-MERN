@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_POSTS = gql`
   query posts($username: String) {
@@ -42,6 +42,7 @@ export const QUERY_RECORD = gql`
       _id
       title
       artist
+      username
       comments {
         commentText
         _id
@@ -51,22 +52,22 @@ export const QUERY_RECORD = gql`
     }
   }
 `;
-export const QUERY_RECORDS= gql`
+export const QUERY_RECORDS = gql`
   query records($username: String) {
     records(username: $username) {
+      _id
+      title
+      artist
+      username
+      comments {
+        commentText
         _id
-        title
-        artist
-        comments {
-          commentText
-          _id
-          createdAt
-          username
+        createdAt
+        username
       }
     }
   }
 `;
-
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -90,7 +91,7 @@ export const QUERY_USER = gql`
         title
         artist
       }
-      comments{
+      comments {
         _id
         commentText
         createdAt
@@ -111,7 +112,7 @@ export const QUERY_ME = gql`
         title
         artist
       }
-      comments{
+      comments {
         _id
         commentText
         createdAt

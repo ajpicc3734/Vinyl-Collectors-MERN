@@ -9,13 +9,13 @@ const recordSchema = new Schema(
     },
     artist: {
       type: String,
-      required: true,
+      //required: true,
     },
-  username: {
-    type: String,
-    required: true
-  },
-    comments: [commentSchema]
+    username: {
+      type: String,
+      // required: true
+    },
+    comments: [commentSchema],
   },
   {
     toJSON: {
