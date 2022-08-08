@@ -14,12 +14,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
+import SingleRecord from './pages/SingleRecord'
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
-
-import SingleRecord from './pages/SingleRecord'
-
 import About from './pages/About';
 //import Records from './pages/Records';//
 
