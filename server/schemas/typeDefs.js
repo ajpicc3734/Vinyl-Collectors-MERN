@@ -29,10 +29,10 @@ const typeDefs = gql`
     _id: ID
     title: String
     artist: String
-     comments: [Comment]
-   }
+    comments: [Comment]
+  }
 
-   type Comment {
+  type Comment {
     _id: ID
     commentText: String
     createdAt: String

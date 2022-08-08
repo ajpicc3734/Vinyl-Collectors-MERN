@@ -21,7 +21,7 @@ import Signup from './pages/Signup';
 import SingleRecord from './pages/SingleRecord'
 
 import About from './pages/About';
-import Records from './pages/Records';
+// import Records from './pages/Records';
 
 
 const httpLink = createHttpLink({

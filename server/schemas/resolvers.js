@@ -10,7 +10,8 @@ const resolvers = {
           .select('-__v -password')
           .populate('posts')
           .populate('friends')
-          .populate('records');
+          // .populate('records')
+          ;
 
         return userData;
       }
@@ -22,14 +23,16 @@ const resolvers = {
         .select('-__v -password')
         .populate('posts')
         .populate('friends')
-        .populate('records');
+        // .populate('records')
+        ;
     },
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
         .populate('friends')
         .populate('posts')
-        .populate('records');
+        // .populate('records')
+        ;
 
     },
     posts: async (parent, { username }) => {
@@ -53,26 +56,26 @@ const resolvers = {
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
-    
+
       return { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-    
+
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
       }
-    
+
       const correctPw = await user.isCorrectPassword(password);
-    
+
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-    
+
       const token = signToken(user);
       return { token, user };
     },
-    
+
     addPost: async (parent, args, context) => {
       if (context.user) {
         const post = await Post.create({ ...args, username: context.user.username });
