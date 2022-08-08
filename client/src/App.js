@@ -75,7 +75,7 @@ function App() {
                 path="/post/:id"
                 element={<SinglePost />}
               />
-               {/* <Route
+              {/* <Route
                 path="/record/:id"
                 element={<SingleRecord />}
               /> */}
