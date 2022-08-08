@@ -65,6 +65,10 @@ function App() {
                 path="/post/:id"
                 element={<SinglePost />}
               />
+               {/* <Route
+                path="/record/:id"
+                element={<SingleRecord />}
+              /> */}
               <Route
                 path="*"
                 element={<NoMatch />}
