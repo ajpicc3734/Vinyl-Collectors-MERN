@@ -71,10 +71,10 @@ function App() {
                 path="/about"
                 element={<About />}
               />
-              <Route
+              {/* <Route
                 path="/records"
                 element={<Records />}
-              />
+              /> */}
               <Route
                 path="/post/:id"
                 element={<SinglePost />}
