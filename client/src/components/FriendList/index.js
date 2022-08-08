@@ -1,13 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const FriendList = ({ friendCount, username, friends }) => {
+  if (!friends || !friends.length) {
+    return <p className="bg-dark text-light p-3">{username}, make some friends!</p>;
+  }
+
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container">
-        Vinyl Collectors &copy;{new Date().getFullYear()} by An awesome group of individuals!
-      </div>
-    </footer>
+    <div>
+      <h5>
+        {username}'s {friendCount} {friendCount === 1 ? 'friend' : 'friends'}
+      </h5>
+      {friends.map(friend => (
+        <button className="btn w-100 display-block mb-2" key={friend._id}>
+          <Link to={`/profile/${friend.username}`}>{friend.username}</Link>
+        </button>
+      ))}
+    </div>
   );
 };
 
-export default Footer;
+export default FriendList;

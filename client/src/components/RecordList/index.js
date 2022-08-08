@@ -24,11 +24,12 @@ const RecordList = ({ records, title }) => {
             </p>
             <div className="card-body">
               <Link to={`/record/${record._id}`}>
-                {/* <p>{record.postText}</p>
+                <p>{record.title}</p>
+                <p>{record.artist}</p>
                 <p className="mb-0">
-                  Likes: {post.reactionCount} || {' '}
-                  {post.reactionCount ? 'see' : 'Join'}  the discussion!
-                </p> */}
+                  {/* Likes: {record.commentCount} || {' '} */}
+                  {record.commentCount ? 'see' : 'Join'}  the discussion!
+                </p>
               </Link>
             </div>
           </div>
