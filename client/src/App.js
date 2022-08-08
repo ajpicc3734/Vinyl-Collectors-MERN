@@ -17,6 +17,7 @@ import NoMatch from './pages/NoMatch';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import SingleRecord from './pages/SingleRecord'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -65,10 +66,10 @@ function App() {
                 path="/post/:id"
                 element={<SinglePost />}
               />
-               {/* <Route
+               <Route
                 path="/record/:id"
                 element={<SingleRecord />}
-              /> */}
+              />
               <Route
                 path="*"
                 element={<NoMatch />}
