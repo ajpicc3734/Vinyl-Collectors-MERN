@@ -3,6 +3,7 @@ import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
 import FriendList from '../components/FriendList';
 import coverImage from '../assets/cover/background.jpg';
+import logoutImage from '../assets/cover/logout.jpg';
 
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
@@ -17,9 +18,14 @@ const Home = () => {
 
   return (
     <main>
-      {!loggedIn && (
+      {loggedIn && (
         <div className="coverImage">
           <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+        </div>
+      )}
+      {!loggedIn && (
+        <div className="logoutImage">
+          <img src={logoutImage} className="my-2" style={{ width: "70%" }} alt="logout" />
         </div>
       )}
       {!loggedIn && (
