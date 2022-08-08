@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -18,7 +18,7 @@ const typeDefs = gql`
     reactionCount: Int
     reactions: [Reaction]
   }
-  
+
   type Reaction {
     _id: ID
     reactionBody: String
@@ -29,6 +29,7 @@ const typeDefs = gql`
     _id: ID
     title: String
     artist: String
+    username: String
     comments: [Comment]
   }
 
@@ -50,18 +51,18 @@ const typeDefs = gql`
     posts(username: String): [Post]
     post(_id: ID!): Post
     record(_id: ID!): Record
-
   }
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!):Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addPost(postText: String!): Post
     addReaction(postId: ID!, reactionBody: String!): Post
     addFriend(friendId: ID!): User
-    addRecord(title: String!, artist: String!): Record
+    addRecord(title: String!): Record
     addComment(recordId: ID!, commentText: String!): Record
-
   }
 `;
+
+//ADD ARTIST TO ADDRECORD
 
 module.exports = typeDefs;

@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const RecordList = ({ records, title }) => {
-  if (!records.length) {
-    return <h3>No records Yet</h3>;
-  }
+  // if (!records.length) {
+  //   return <h3>No records Yet</h3>;
+  // }
 
   return (
     <div>
       <h3>{title}</h3>
       {records &&
-        records.map(record => (
+        records.map((record) => (
           <div key={record._id} className="card mb-3">
             <p className="card-header">
               <Link
@@ -19,7 +19,7 @@ const RecordList = ({ records, title }) => {
                 className="text-light"
               >
                 {record.username}
-              </Link>{' '}
+              </Link>{" "}
               Posted on {record.createdAt}
             </p>
             <div className="card-body">
@@ -28,7 +28,7 @@ const RecordList = ({ records, title }) => {
                 <p>{record.artist}</p>
                 <p className="mb-0">
                   {/* Likes: {record.commentCount} || {' '} */}
-                  {record.commentCount ? 'see' : 'Join'}  the discussion!
+                  {record.commentCount ? "see" : "Join"} the discussion!
                 </p>
               </Link>
             </div>
