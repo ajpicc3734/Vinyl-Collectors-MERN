@@ -25,11 +25,13 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($postText: String!, $artist: String!) {
-    addPost(postText: $postText, artist: $artist ) {
+  mutation addPost($postText: String!, $artist: String!, $review: String!, $rating: String!) {
+    addPost(postText: $postText, artist: $artist, review: $review, rating: $rating) {
       _id
       postText
       artist
+      review
+      rating
       createdAt
       username
       reactionCount

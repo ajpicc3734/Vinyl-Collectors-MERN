@@ -6,6 +6,8 @@ export const QUERY_POSTS = gql`
       _id
       postText
       artist
+      review
+      rating
       createdAt
       username
       reactionCount
@@ -25,6 +27,8 @@ export const QUERY_POST = gql`
       _id
       postText
       artist
+      review
+      rating
       createdAt
       username
       reactionCount
@@ -86,6 +90,8 @@ export const QUERY_USER = gql`
         _id
         postText
         artist
+        review
+        rating
         createdAt
         reactionCount
       }
@@ -125,6 +131,8 @@ export const QUERY_ME = gql`
         _id
         postText
         artist
+        review
+        rating
         createdAt
         reactionCount
         reactions {
