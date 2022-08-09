@@ -24,7 +24,8 @@ const PostList = ({ posts, title }) => {
             </p>
             <div className="card-body">
               <Link to={`/post/${post._id}`}>
-                <p>{post.postText}</p>
+                <p>Record Title: {post.postText}</p>
+                <p>Musical Artist: {post.artist}</p>
                 <p className="mb-0">
                   Likes: {post.reactionCount} ||{" "}
                   {post.reactionCount ? "see" : "Join"} the discussion!
