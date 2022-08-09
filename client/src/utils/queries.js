@@ -5,6 +5,7 @@ export const QUERY_POSTS = gql`
     posts(username: $username) {
       _id
       postText
+      artist
       createdAt
       username
       reactionCount
@@ -23,6 +24,7 @@ export const QUERY_POST = gql`
     post(_id: $id) {
       _id
       postText
+      artist
       createdAt
       username
       reactionCount
@@ -83,6 +85,7 @@ export const QUERY_USER = gql`
       posts {
         _id
         postText
+        artist
         createdAt
         reactionCount
       }
@@ -121,6 +124,7 @@ export const QUERY_ME = gql`
       posts {
         _id
         postText
+        artist
         createdAt
         reactionCount
         reactions {

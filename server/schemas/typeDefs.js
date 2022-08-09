@@ -13,6 +13,7 @@ const typeDefs = gql`
   type Post {
     _id: ID
     postText: String
+    artist: String
     createdAt: String
     username: String
     reactionCount: Int
@@ -55,7 +56,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addPost(postText: String!): Post
+    addPost(postText: String!, artist: String!): Post
     addReaction(postId: ID!, reactionBody: String!): Post
     addFriend(friendId: ID!): User
     addRecord(title: String!): Record
