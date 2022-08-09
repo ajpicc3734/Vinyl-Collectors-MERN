@@ -53,7 +53,7 @@ export const QUERY_RECORD = gql`
   }
 `;
 export const QUERY_RECORDS = gql`
-  query records($username: String) {
+  query records($username: String!) {
     records(username: $username) {
       _id
       title
@@ -111,6 +111,7 @@ export const QUERY_ME = gql`
         _id
         title
         artist
+        username
       }
       comments {
         _id
