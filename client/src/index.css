@@ -161,6 +161,21 @@ nav a:hover {
   font-size: 1.4rem;
 }
 
+.dropzone {
+  height: 8rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px dashed rgb(231, 113, 45);
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.active {
+  border: 2px soild black;
+}
 /* FORM */
 .form-label,
 .form-input,

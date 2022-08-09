@@ -10,6 +10,9 @@ const postSchema = new Schema(
       minlength: 1,
       maxlength: 280
     },
+    artist: {
+      type: String
+    },
     createdAt: {
       type: Date,
       default: Date.now,
