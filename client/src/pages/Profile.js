@@ -1,8 +1,6 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 
-import RecordForm from "../components/RecordForm";
-import RecordList from "../components/RecordList";
 import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 import FriendList from "../components/FriendList";
@@ -71,12 +69,7 @@ const Profile = (props) => {
             title={`${user.username}'s posts...`} />
         </div>
 
-        <div className="col-12 mb-3 col-lg-8">
-          <RecordList
-            records={user.records}
-            title={`${user.username}'s records...`}
-          />
-        </div>
+    
 
         <div className="col-12 col-lg-3 mb-3">
           <FriendList
@@ -87,7 +80,7 @@ const Profile = (props) => {
         </div>
       </div>
       <div className="mb-3">{!userParam && <PostForm />}</div>
-      <div className="mb-3">{!userParam && <RecordForm />}</div>
+     
     </div>
   );
 };
