@@ -75,7 +75,7 @@ const resolvers = {
       if (context.user) {
         const post = await Post.create({
           ...args,
-          username: context.user.username,
+          username: context.user.username
         });
 
         await User.findByIdAndUpdate(
@@ -93,7 +93,7 @@ const resolvers = {
       if (context.user) {
         const record = await Record.create({
           ...args,
-          username: context.user.username,
+          username: context.user.username
         });
 
         await User.findByIdAndUpdate(

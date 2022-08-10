@@ -5,6 +5,9 @@ export const QUERY_POSTS = gql`
     posts(username: $username) {
       _id
       postText
+      artist
+      review
+      rating
       createdAt
       username
       reactionCount
@@ -23,6 +26,9 @@ export const QUERY_POST = gql`
     post(_id: $id) {
       _id
       postText
+      artist
+      review
+      rating
       createdAt
       username
       reactionCount
@@ -53,7 +59,7 @@ export const QUERY_RECORD = gql`
   }
 `;
 export const QUERY_RECORDS = gql`
-  query records($username: String) {
+  query records($username: String!) {
     records(username: $username) {
       _id
       title
@@ -83,6 +89,9 @@ export const QUERY_USER = gql`
       posts {
         _id
         postText
+        artist
+        review
+        rating
         createdAt
         reactionCount
       }
@@ -111,6 +120,7 @@ export const QUERY_ME = gql`
         _id
         title
         artist
+        username
       }
       comments {
         _id
@@ -120,6 +130,9 @@ export const QUERY_ME = gql`
       posts {
         _id
         postText
+        artist
+        review
+        rating
         createdAt
         reactionCount
         reactions {

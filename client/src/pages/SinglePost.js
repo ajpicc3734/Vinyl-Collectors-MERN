@@ -28,10 +28,13 @@ const SinglePost = (props) => {
           <span style={{ fontWeight: 700 }} className="text-light">
             {post.username}
           </span>{' '}
-          post on {post.createdAt}
+          Record Posted On {post.createdAt}
         </p>
         <div className="card-body">
-          <p>{post.postText}</p>
+          <p>Album: {post.postText}</p>
+          <p>Artist: {post.artist}</p>
+          <p>Rating: {post.rating}</p>
+          <p>Review: {post.review}</p>
         </div>
       </div>
 
