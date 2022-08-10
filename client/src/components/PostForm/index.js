@@ -53,7 +53,7 @@ const PostForm = () => {
   const handleChangeReview = (event) => {
     if (event.target.value.length <= 280) {
       setReview(event.target.value);
-      setCharacterCount(event.target.value.length);
+      
     }
   };
   const handleChangeRating = (event) => {

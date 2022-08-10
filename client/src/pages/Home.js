@@ -1,8 +1,6 @@
 import React from 'react';
 import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
-import RecordList from '../components/RecordList';
-import RecordForm from '../components/RecordForm';
 import FriendList from '../components/FriendList';
 import coverImage from '../assets/cover/background.jpg';
 import logoutImage from '../assets/cover/logout.jpg';
@@ -15,7 +13,7 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_POSTS, QUERY_RECORDS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const posts = data?.posts || [];
-  const records = data?.records || [];
+  
 
   const loggedIn = Auth.loggedIn();
   return (
@@ -53,21 +51,7 @@ const Home = () => {
               title="Recent Posts..."
             />
           )}
-        {loggedIn && (
-          <div className="col-12 mb-3">
-            <RecordForm />
-          </div>
-        )}
-        <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <RecordList
-              records={records}
-              title="Recent Posts..."
-            />
-          )}
-        </div>
+        
         {loggedIn && userData ? (
           <div className="col-12 col-lg-3 mb-3">
             <FriendList

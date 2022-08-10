@@ -5,6 +5,11 @@
 This React application lets you create a user, log a user in, create a record review, and comment on record review.
 
 ## Built With
+- MongoDB
+- Express.js
+- React
+- Node
+- Apollo Server
 
 ## Steps to run app
 
@@ -12,3 +17,7 @@ This React application lets you create a user, log a user in, create a record re
 2. On a separate terminal, run `mongod` to start the database server
 3. Run `npm run seed` to populate your database
 4. Run `npm run develop` to run the application (both server and client simultaneously)
+
+## Deployed URL
+https://desolate-depths-50019.herokuapp.com/
+
