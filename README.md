@@ -4,6 +4,8 @@
 
 This React application lets you create a user, log a user in, create a record review, and comment on record review.
 
+## Built With
+
 ## Steps to run app
 
 1. Run `npm i` to install the application's dependencies
