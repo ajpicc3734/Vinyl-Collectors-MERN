@@ -7,9 +7,7 @@ const About = () => {
                 About Vinyl Collectors
             </h1>
             <p />
-            <h4>
-                Although the name is specific to a format, at the core, we're all just music lovers.
-            </h4>
+            Do you enjoy discovering new (to you) music? Or discussing your favorite record with others? Well, here at Vinyl Collectors you can do just that. You can even start the discussion by adding a record review to your profile!
         </div>
     );
 };
