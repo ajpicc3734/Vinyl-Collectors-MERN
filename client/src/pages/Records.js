@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useParams } from 'react-router-dom';
-
-import { useQuery } from '@apollo/client';
-import { QUERY_RECORD } from '../utils/queries';
-
-const Records = (props) => {
-    const { id: recordId } = useParams();
-
-
-    const { loading, data } = useQuery(QUERY_RECORD, {
-        variables: { id: recordId }
-    });
-
-    const record = data?.addRecord || {};
-
-=======
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -30,7 +12,6 @@ const Records = (props) => {
   });
 
   const record = data?.addRecord || {};
->>>>>>> 38e01a272a78fdfd67af81a90772e2b8667dd08e
 
   if (loading) {
     return <div>Loading...</div>;

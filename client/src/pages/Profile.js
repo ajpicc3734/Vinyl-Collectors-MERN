@@ -1,19 +1,11 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 
-<<<<<<< HEAD
-import RecordForm from '../components/RecordForm';
-// import RecordList from '../components/RecordList';
-import PostForm from '../components/PostForm';
-import PostList from '../components/PostList';
-import FriendList from '../components/FriendList';
-=======
 import RecordForm from "../components/RecordForm";
 import RecordList from "../components/RecordList";
 import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 import FriendList from "../components/FriendList";
->>>>>>> 38e01a272a78fdfd67af81a90772e2b8667dd08e
 
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
@@ -74,20 +66,17 @@ const Profile = (props) => {
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
-          <PostList posts={user.posts} title={`${user.username}'s posts...`} />
+          <PostList
+            posts={user.posts}
+            title={`${user.username}'s posts...`} />
         </div>
 
-<<<<<<< HEAD
-        {/* <div className="col-12 mb-3 col-lg-8">
-        <RecordList
-=======
         <div className="col-12 mb-3 col-lg-8">
           <RecordList
->>>>>>> 38e01a272a78fdfd67af81a90772e2b8667dd08e
             records={user.records}
             title={`${user.username}'s records...`}
           />
-        </div> */}
+        </div>
 
         <div className="col-12 col-lg-3 mb-3">
           <FriendList
