@@ -1,4 +1,6 @@
-# Vinyl-Collectors-MERN
+# Vinyl-Collectors
+
+## Description
 
 This React application lets you create a user, log a user in, create a record review, and comment on record review.
 
