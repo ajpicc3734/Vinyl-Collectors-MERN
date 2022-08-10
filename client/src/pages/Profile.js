@@ -66,7 +66,9 @@ const Profile = (props) => {
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
-          <PostList posts={user.posts} title={`${user.username}'s posts...`} />
+          <PostList
+            posts={user.posts}
+            title={`${user.username}'s posts...`} />
         </div>
 
         <div className="col-12 mb-3 col-lg-8">

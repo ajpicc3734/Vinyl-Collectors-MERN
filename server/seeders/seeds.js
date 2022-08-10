@@ -87,7 +87,7 @@ db.once('open', async () => {
     createdPosts.push(createdPost);
   }
 
-    // create Records
+  // create Records
 
   // create reactions
   for (let i = 0; i < 100; i += 1) {

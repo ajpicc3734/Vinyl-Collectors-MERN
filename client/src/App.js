@@ -19,7 +19,7 @@ import SinglePost from "./pages/SinglePost";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
-import Records from "./pages/Records"; //
+import Records from "./pages/Records";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
